@@ -196,16 +196,19 @@ Remember:
 
 Let’s recap bubble and insertion sorts! Because of their inefficiency, they’re rarely used in programming, but they’re basic, fundamental algorithms with which to start.
 
-Bubble sort works by iterating through a list, swapping neighboring values, and repeating this process until the set is sorted.
+**Bubble sort** works by iterating through a list, swapping neighboring values, and repeating this process until the set is sorted.
 
-Runtime: O(N^2)
-Space complexity: O(1)
-Stable
-Insertion sort works by taking a value in an array and inserting it into its proper position.
+- Runtime: O(N^2)
+- Space complexity: O(1)
+- Stable
 
-Runtime: O(N^2)
-Space complexity: O(1)
-Stable
-TOPICS
-Bubble Sort
-Insertion Sort
+**Insertion sort** works by taking a value in an array and inserting it into its proper position.
+
+- Runtime: O(N^2)
+- Space complexity: O(1)
+- Stable
+
+### TOPICS
+
+- Bubble Sort
+- Insertion Sort
