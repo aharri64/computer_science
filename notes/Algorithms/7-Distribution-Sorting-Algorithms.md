@@ -99,4 +99,101 @@ Can you guess bucket sort’s Big O space efficiency?
 
 `O(N)` - Because bucket sort creates an entirely new array for the sorted values, it has O(N) space efficiency. This should sound like another algorithm we met recently - merge sort!
 
-#
+# How Radix Sort Works
+
+10 of 15
+
+Without getting too deep into the weeds, radix sort operates by looking at the individual digits in a set of numbers. Radix starts at either the beginning of a number (the **most significant digit** approach) or the end of a number (the **least significant digit** approach) and works through each digit until it’s reached the end and the values are sorted.
+
+Let’s use the least significant digit approach on this unsorted array: `[270, 65, 30, 603, 3, 84]`. (If you’re thinking that this array isn’t dense enough for radix sort, you’re correct! We’re just using it here for the purpose of illustration.)
+
+1. We’ll start by sorting the values based on their least significant digit — the ones’ place: `[270, 30, 603, 3, 84, 65]`.
+2. Next, we’ll sort this array based on the next digit — the tens’ place: `[603, 3, 30, 65, 270, 84]`. (Note that if a number doesn’t have anything in the tens’ place, like 3, we act like there’s a 0 there.)
+3. Finally, we’ll sort based on the most significant digit — the hundreds’ place: `[3, 30, 65, 84, 270, 603]`.
+
+Like magic, right?
+
+# Knowledge Check 4
+
+11 of 15
+
+You’re sorting a database of employee salary data from lowest to highest earning. Here’s what the database looks like:
+
+| **Salary** |
+| ---------- |
+| 730,000    |
+| 66,000     |
+| 71,000     |
+| 260,000    |
+| 59,000     |
+| 890,000    |
+| 810,000    |
+| 52,000     |
+| 68,000     |
+| 55,000     |
+
+Is bucket sort a good option to use on this database?
+
+**ANSWER:** No - This data is not very dense, so bucket sort would not be a good option here. You
+
+# Knowledge Check 5
+
+12 of 15
+
+You removed the top earners’ salaries from the database, so you’re left with this data set. It’s denser now and perfect for bucket sort!
+
+| **Salary** |
+| ---------- |
+
+66,000
+71,000
+59,000
+52,000
+68,000
+55,000
+
+How many buckets would you use to sort this data?
+
+**ANSWER:** 2 - Because there are six values in this database, two buckets would work well here. (You could also make the argument that three buckets would work, as the square root of sic is 2.449.)
+
+# Let’s Talk About Interviews
+
+13 of 15
+
+You’re more likely to be asked about bubble, insertion, merge, or quick sorts in an interview than bucket or radix sorts. But it’s important to know how distribution sorts work, how they differ from comparison sorts, and the basics of bucket and radix sorts.
+
+To get a better sense of how these algorithms work, use this visualization tool!
+
+- [Bucket sort visualization](https://www.cs.usfca.edu/~galles/visualization/BucketSort.html).
+- [Radix sort visualization](https://www.cs.usfca.edu/~galles/visualization/RadixSort.html).
+
+Because we won’t discuss how to implement radix sort in code, you can read more about it [here](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/radix-sort).
+
+# Time to Practice
+
+14 of 15
+
+Jump into [this CodePen](https://codepen.io/GAmarketing/pen/RdwpEJ?editors=0010#0) and try out implementing bucket sort! The Pen is light on pseudocode or starter code, so think carefully about how you’d implement this algorithm and see how far you can get on your own.
+
+Remember:
+
+- Fork the Pen before you get started.
+- Don’t touch the test scripts at the bottom.
+- Use the test scripts to check your work!
+
+# Distribution Sorting Algorithms Review
+
+15 of 15
+
+Let’s review what we’ve learned about distribution sorts:
+
+- Distribution sorts use one property of an element to determine where it should be sorted.
+- **Bucket sort** categorizes elements into buckets based on their value then uses another sorting method to categorize elements within those buckets.
+- **Radix sort** uses a very similar approach, only with integers.
+- Use distribution sorts for data sets that are **dense** (i.e., their values are close together).
+
+### TOPICS
+
+- Distribution Sorting
+- Bucket Sort
+- Radix Sort
