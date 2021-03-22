@@ -132,3 +132,122 @@ The parts are:
 After this, the pivot is considered sorted, as it’s a single element. Now, we need to recursively call quick sort on the partitioned array on either side of the pivot in order to sort those elements.
 
 ![quick-sort](../pics/quick-sort.gif)
+
+# The Quick Sort Process
+
+11 of 19
+
+Let’s visualize how we’d quick sort this array. It’s conventional to use either the first or last value in an array as the pivot, so here we’ll use `3`.
+
+We continue partioning and choosing new pivots as we work through the array until we get to all single-item elements.
+
+![2-Diagram](../pics/2-Diagram.png)
+
+# Breaking Down Quick Sort
+
+12 of 19
+
+(video)
+
+Let’s break down a quick sort. It’s a bit of a beast, so bear with us!
+
+Say we start with this unsorted array. We’ll choose the last element as the pivot — in this case, the number “4.” It’s conventional to choose the first or last element in an array as the pivot. Then, we’d partition the array like so. In this case, the pivot, number “4,” is considered sorted. Then, we call quick sort on the remaining two partitions.
+
+Let’s start with the left partition. Now, we choose the number “3” as the pivot for this partition. It’s considered sorted. Because the left and right partitions are single-element arrays, they’re sorted as well.
+
+Now we move onto the original right partition. We’ll choose “6” as the pivot here and partition it. Now we need to partition again. This is the recursive step. The right partition pivot, number “6,” is considered sorted. Since “left2” is a single-element array, it's considered sorted as well.
+
+Now for “right2.” We’ll choose “8” as the pivot here and partition. It’s sorted! So, our final right partition looks like this.
+
+Combining the left partitions and right partitions give us this — a sorted array!
+
+# Visualizing Quick Sort
+
+13 of 19
+
+We know that the concept of quick sort and partitioning is complicated. Luckily, the internet understands that, too. Here are a couple of fun resources you can explore if you want to dive in further:
+
+- [This tool](http://me.dt.in.th/page/Quicksort/) allows you to move through the algorithm on a sample data set step-by-step. Play around with this until you feel like you’ve absorbed what’s happening.
+- [This video](https://www.youtube.com/watch?v=ywWBy6J5gz8&list=PLuE79vNc5Wi6q34LsQcaJ7ISQ8uOyMaL_&index=5) helps you visualize quick sort with folk dancing. Do-si-do your way into quick sort confidence!
+
+# Knowledge Check
+
+14 of 19
+
+What is quick sort’s time complexity?
+
+`O(N^2)`, or quadratic complexity, is pretty inefficient. It's bubble sort status! The partitioning in quick sore is what slows it down.
+
+# Quick Sort: Not So Quick After All?
+
+15 of 19
+
+Quick sort’s worst-case efficiency of `O(N^2)` begs the question: Why would we ever use quick sort over merge sort?
+
+Merge sort and quick sort actually have the same average-case time complexity, `Θ(N log(N))`, which is efficient! You can expect their performance to be efficient most of the time.
+
+And in practice, quick sort tends to even be a little bit faster than merge sort. Why? Because quick sort has a much lower space complexity, at `O(log(N))`, than merge sort’s space complexity of `O(N)`. Using up all of that extra memory can slow merge sort down at times.
+
+But sometimes, merge sort will win out. Quick sort gets tripped up on data sets with very similar values. If you’re trying to sort a list like the following, merge sort is bound to win!
+
+`[3, 5, 5, 3, 3, 5, 3, 3, 3, 5, 5, 3, 5, 3, 3]`
+
+# Quick Sort vs. Merge Sort
+
+16 of 19
+
+Here are some of the ways in which quick and merge sorts are used:
+
+| **Quick Sort**                                                       | **Merge Sort**                                                                       |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Better in a virtual memory environment.                              | Useful in database scenarios.                                                        |
+| Built-in sort function in C programming languages, Java, and Python. | Useful when additional data may arrive during or after sorting.                      |
+| Works better for caching environments.                               | Used by Safari and Firefox in their implementation of JavaScript’s `.sort` function. |
+
+# Let’s Talk About Interviews
+
+17 of 19
+
+In a job interview, you might be asked to sketch out how merge sort and quick sort work, or to compare the two and describe situations in which you’d use one or the other.
+
+- Use this tool to [compare merge and quick sort](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html) (and other sorting algorithms).
+- Revisit our folk-dancing friends to [understand merge sort](https://www.youtube.com/watch?v=XaqR3G_NVoo).
+- Earlier in this lesson, we linked to tools for understanding quick sort. Play with those!
+
+Check out these videos for a recap on how the two algorithms work and discover what they look like sketched out: [merge sort](https://www.youtube.com/watch?v=TzeBrDU-JaY) and [quick sort](https://www.youtube.com/watch?v=COk73cpQbFQ&list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U&index=9).
+
+# Time to Practice
+
+18 of 19
+
+Now, it’s over to you! Want to practice writing merge and quick sorts? Try them out in [this CodePen](https://codepen.io/GAmarketing/pen/MxWpQW).
+
+This exercise doesn’t have much pseudocode, but you can look back in this lesson, which features some for merge sort. (We’ve also included code for the merge helper function, so you don’t have to worry about writing that one!)
+
+Remember to...
+
+- Fork the Pen before editing it.
+- Not touch the test scripts at the bottom.
+
+These algorithms — especially quick sort — are difficult. See how far you can get on your own!
+
+# Divide-and-Conquer Sorting Algorithms
+
+Merge sort and quick sort are efficient algorithms that form the backbone of the default sorting function in many programming languages.
+
+**Merge sort** has two components: the merge sort algorithm, which divides an array into single elements, and the merge function (or the merge helper function), which merges the sorted arrays back together.
+
+- Runtime: `O(log(N))`
+- Space complexity: `O(N)`
+- Stable
+
+**Quick sort** uses a similar “divide-and-conquer” approach, instead with a partitioning method that divides an array around a pivot element and then combines the sorted arrays.
+
+- Runtime: `O(N^2)`
+- Space complexity: `O(log(N))`
+- Unstable
+
+### TOPICS
+
+- Merge Sort
+- Quick Sort
