@@ -212,3 +212,23 @@ The other thing that makes tries unique? They almost always store alphabetical d
 Let’s say that we built a trie for the phrase, “Peter Piper picked a peck of pickled peppers.”
 
 What if we wanted to add the word “pecked” to this trie? First, we’d check to see if the word already existed in the trie. Not there. Then, we’d follow existing nodes as far as we could go to write this word — in this case, we already have peck. To the “K” node, we’d add a reference to a new node, “E,” and then add a reference from “E” to “D.”
+
+# Where Tries Stop
+
+A trie can stop at the end of a chain if there are no more nodes for it to visit. But it can also return a word before it reaches the end; we just have to tell it where to stop.
+
+What if we were looking for the word “pick” in the trie below? It’s there, but our current code wouldn’t know how to return it. To make the return, we’d add the `isWord` property to the “K” in “pick” so that the trie knows this is a complete word and it can return there.
+
+`isWord` tells the trie which paths create valid words. We’d add the property to the “K” but not the “C” before it, as that’s not a valid English word.
+
+![root-node](../pics/root-node.png)
+
+# Tries in Action
+
+Tries have some pretty cool applications. If you’ve ever started typing a search query into Google (or another search engine), you’ve probably seen it attempt to autocomplete what you’re looking for. That’s a trie in action!
+
+Because you now know how tries work, you can probably imagine how each letter we type into a search box would retrieve a subset of a much larger trie.
+
+![spaghetti-search](../pics/spaghetti-search.png)
+
+Tries don’t often function on their own. They’re usually used in conjunction with another data structure or some type of search algorithm. But the trie structure is what lays the groundwork from which strings of letters can be pulled.
