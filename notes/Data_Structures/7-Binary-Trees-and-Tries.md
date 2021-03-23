@@ -232,3 +232,33 @@ Because you now know how tries work, you can probably imagine how each letter we
 ![spaghetti-search](../pics/spaghetti-search.png)
 
 Tries don’t often function on their own. They’re usually used in conjunction with another data structure or some type of search algorithm. But the trie structure is what lays the groundwork from which strings of letters can be pulled.
+
+# Let’s Talk About Interviews
+
+In an interview, you’re probably more likely to be asked about a binary tree than a trie. It could be a prompt as simple as, “Build a binary tree from this array of numbers,” which you should now be able to pass with flying colors! But binary trees can get complicated quickly. This [article](https://medium.com/techie-delight/binary-tree-interview-questions-and-practice-problems-439df7e5ea1f) outlines a number of related problems (with solutions!) that you might encounter.
+
+You might also be asked to talk through the differences between different types of trees. This [page](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree) outlines common characteristics of trees, as well as characteristics for several specific types of trees, including some we didn’t cover in this lesson. (Bonus: Because we didn’t cover how to implement a trie, you can read about it [here!](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie))
+
+Practice building a binary tree or trie with this visualization:
+
+- [Binary tree](https://www.cs.usfca.edu/~galles/visualization/BST.html)
+- [Trie](https://www.cs.usfca.edu/~galles/visualization/Trie.html)
+
+# Binary Trees and Tries Review
+
+Let’s recap on binary trees and tries.
+
+**Trees** are an important hierarchical data structure. They’re made up of **nodes**, where data is stored, and **edges**, which represent the connections between the data.
+
+- A **binary tree** is a tree with one unique feature: Any node can only have two branches (connections to other nodes). Nodes in a binary tree have a left property that points to a lesser value or a right property that points to a greater value.
+- A **trie**is a type of tree that can only store alphabetical data. Each node stores a letter value and points forward to other nodes that make up words.
+
+  Now that you understand binary trees, you can understand memes like this one. Lucky you!
+
+![pants-meme](../pics/pants-meme.jpeg)
+
+### TOPICS
+
+- Binary Trees
+- Breadth- and Depth-First Traversal
+- Tries
