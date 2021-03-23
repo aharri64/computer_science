@@ -87,3 +87,38 @@ Because sets can only stor unique values, the data structure can detect whether 
 A set won’t allow you to add a value that’s already present. But, if you wanted to insert the user "heather" to this set you’d be able to, as it’s a new value! It would get added to the end of the set.
 
 ![set3](../pics/set3.png)
+
+# Common Set Methods
+
+The following methods are commonly built into sets:
+
+| Method             | Description                                                                                                                         |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `.length`          | Returns the length of the set.                                                                                                      |
+| `.insert(value)`   | Adds a value to the set, unless it’s already present.                                                                               |
+| `.remove(value)`   | Removes and returns a value from the set.                                                                                           |
+| `.has(value)`      | Returns true if the value is already in the set.                                                                                    |
+| `.union(set)`      | Returns a new set comprising the union between two previous sets (i.e., the combined values of both sets).                          |
+| `.intersect(set)`  | Returns a new set comprising the intersection between two previous sets (i.e., the values in both sets).                            |
+| `.difference(set)` | Returns a new set comprising the difference between two sets (i.e., the values that only appeared in one of the two previous sets). |
+
+# Hack Alert!
+
+With the release of ES6 in 2015, JavaScript now includes a native set object you can use in most browsers, as well as Node.js. When you’re building your own applications in JavaScript, you can use this to quickly and easily create a set.
+
+Given how recently they were added to the language, sets haven’t been widely adopted in JavaScript. By contrast, Python has had a native set object for a while, and you’ll see them used in a lot of Python web applications and in data science.
+
+# Let’s Talk About Interviews
+
+In a job interview, you might be asked to use some of the set methods we’ve looked at in this lesson. (You’ll have a chance to practice them on the next slide!)
+
+If you’re hungry for more information on sets, take a dive deep [here](https://flaviocopes.com/javascript-data-structures-set/).
+
+# Time to Practice
+
+Now it’s your turn to implement a set in JavaScript! Use [this CodePen](https://codepen.io/GAmarketing/pen/gEOeZW?editors=1010) to implement a set and some of the common methods we mentioned earlier. You can check your work against the test script at the bottom.
+
+Remember:
+
+- Fork the Pen before making any edits.
+- Don’t make any changes to the test script.
