@@ -61,3 +61,73 @@ The `left` and `right` properties can also be set to `null` if the node has no c
 As we add new nodes to the binary tree, we use this logic to find each new node’s proper place in the structure: **lesser** values go **left**; **greater** values go **right**. (Remember this hint: lesser = left!)
 
 ![binary-tree](../pics/binary-tree.png)
+
+# Building a Binary Tree, Part 1
+
+Let’s take the binary tree we started on the last slide. We've added one node with the value `5` (in actual applications, this might represent an ID in a database or a string to be alphabetically sorted).
+
+So far, our tree looks like this in code and in a diagram:
+
+```js
+{
+    root: {
+        value: 5,
+        left: null,
+        right: null
+    }
+}
+```
+
+# Building a Binary Tree, Part 2
+
+The process of adding a node checks the new node’s value against the existing nodes in the tree, starting with the root. So, if we add a node with value `3` to the tree below, it will go to the left of the root node, as `3` is less than `5`.
+
+```js
+{
+    root: {
+        value: 5,
+        left: {
+            value: 3,
+            left: null,
+            right: null
+        },
+        right: null
+    }
+}
+```
+
+![binary-tree-2](../pics/binary-tree-2.png)
+
+# Building a Binary Tree, Part 3
+
+Then, if we want to add a node with value `7` to the tree, it would go to the right of the root node, as `7` is greater than `5`.
+
+The last node in a binary tree does not have any child nodes — it's a leaf! In this tree, both `3` and `7` would be leaf nodes, as they currently have no children.
+
+![binary-tree-3](../pics/binary-tree-3.png)
+
+# Knowledge Check
+
+### 1
+
+Let’s say that you wanted to add the value 9 to this binary tree. Where would it end up?
+
+<details><summary><strong>ANSWER</strong></summary>
+We'd add it to the right of 7
+
+When we add a node to a binary tree, we start at the root and search each following node until we find a place where our value fits. Starting at the 5 node, we'd move to the right (because 9 > 5) along to the 7 node. Then, we'd add 9 to the right of 7.
+
+</details>
+
+### 2
+
+Of course, we want to bring it back to Big O notation.
+
+Take a wild guess: What’s the time complexity of adding a new node to a binary tree, given what you know about how they’re added?
+
+<details><summary><strong>ANSWER</strong></summary>
+O(N)
+
+Since we need to traverse nodes one at a time in order to get to where we'd place the new value, our time complexity here is O(N).
+
+</details>
