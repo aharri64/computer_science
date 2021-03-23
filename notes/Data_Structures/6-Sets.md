@@ -122,3 +122,17 @@ Remember:
 
 - Fork the Pen before making any edits.
 - Don’t make any changes to the test script.
+
+# Sets Review
+
+Sets are a lot like arrays. However, they can only store unique values. This is so important to a set that it won’t add a new value if it’s already present. It does the thinking for you!
+
+Here’s some additional set-related reading:
+
+- Check out the great [set versus array debate](https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a) in ES6.
+- Learn more about how sets are [implemented in Python](https://www.geeksforgeeks.org/sets-in-python/).
+
+### TOPICS
+
+- What Is a Set?
+- Working With Sets
