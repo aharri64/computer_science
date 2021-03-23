@@ -166,7 +166,49 @@ Everyone’s a winner when it comes to search methods — there’s not one that
 | When you’re trying to find the shortest path from the root node to another node. | When you’re trying to understand dependencies in the data.        |
 | If you only want to use iteration.                                               | If you want to use recursion.                                     |
 
+---
+
 # Knowledge Check
 
-Imagine that you’re searching your family tree for a certain family member. If you’re looking for someone who’s currently alive, would breadth- or depth-first search be the better option?Knowledge Check
 Imagine that you’re searching your family tree for a certain family member. If you’re looking for someone who’s currently alive, would breadth- or depth-first search be the better option?
+
+![family-tree](../pics/family-tree.png)
+
+<details><summary><strong>ANSWER</strong></summary>
+Depth-first
+
+A living family member woulf be closer to the bottom of the family tree, meaning tht depth-first search would be much more efficient. However, if you were looking for your deceased great- great- great-grandmother, a bredth-first search would be more efficient (she's probably closer to the top of the tree).
+
+</details>
+
+# Time to Practice
+
+Use the starter code in [this CodePen](https://codepen.io/GAmarketing/pen/jJOxBd) to take a stab at creating a binary tree, checking your work against the test script. There are several functions to implement; the `height` and `isBalanced` functions will probably be more difficult and you can consider them to be optional.
+
+Remember:
+
+- Fork the Pen before making any changes.
+- Don’t make edits to the test script at the bottom.
+
+# Tries
+
+A **trie** (pronounced like “try” and short for “retrieval”) is a type of tree in which nodes aren’t limited to only `left` and `right` pointers. Instead, each node can store a list of “child” nodes that all represent possible paths forward through the trie.
+
+Like a tree, a trie starts with an empty root node that points to child nodes. Each subsequent child node contains two types of data:
+
+- A value.
+- References to other nodes, usually stored in an array.
+
+The other thing that makes tries unique? They almost always store alphabetical data. The value stored in a node is a single letter, and the references are pointers to other letters that make up a word.
+
+![10-Root-Children-Diagram](../pics/10-Root-Children-Diagram.png)
+
+# Building a Trie
+
+(video)
+
+- Transcript
+
+Let’s say that we built a trie for the phrase, “Peter Piper picked a peck of pickled peppers.”
+
+What if we wanted to add the word “pecked” to this trie? First, we’d check to see if the word already existed in the trie. Not there. Then, we’d follow existing nodes as far as we could go to write this word — in this case, we already have peck. To the “K” node, we’d add a reference to a new node, “E,” and then add a reference from “E” to “D.”
