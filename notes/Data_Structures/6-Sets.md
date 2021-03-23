@@ -42,3 +42,48 @@ This is where a set would come in handy. It could tell you whether or not yogurt
 When you get to the dairy aisle, you need to know exactly how many containers of yogurt to get. This is where an array would be useful:
 
 `array = ["loaf of bread", "loaf of bread", "yogurt", "yogurt", "yogurt", "yogurt", "carton of eggs, "lettuce", "scallions", "grapes", "tomato", "tomato", "tomato", "spaghetti", "spaghetti"]`
+
+# Why Sets?
+
+Sets are useful when you’re dealing with a collection of items, but you **cannot have duplicates**. For example, they can be beneficial for storing:
+
+- Unique usernames in your database.
+- A unique list of tags on all of your blog posts.
+- Customer names.
+
+A set can store any type of data: numbers, Booleans, strings — even arrays or objects. The important thing, however, is that the collection of values is unique.
+
+# Sets vs. Arrays
+
+Let’s say you want to see all of the logins to your site from the past day.
+
+An array (on the left) would show you all of the logins to the site in whatever order you wanted them structured (in this case, let’s say by time of login).
+
+How many unique users logged in? Looking at the array, it’s hard to say exactly, as many users logged in multiple times. A set (on the right) would help!
+
+Passing the same data set through a set object will automatically remove any duplicates for you. Now, it’s more obvious that eight unique users logged in to your site.
+![set1](../pics/set1.png)
+
+# Knowledge Check
+
+Imagine that you wanted to add the value "bueller" to this set. Where would this get inserted?
+
+![set2](../pics/set2.png)
+
+- [ ] At the beginning.
+- [ ] At the end.
+- [ ] Nect to the other appearance of `"bueller"`
+- [ ] It would'nt get added
+
+<details><summary><strong>ANSWER</strong></summary>
+<b>It wouldn't get added</b>
+
+Because sets can only stor unique values, the data structure can detect whether or not he value you're trying to add is present. If the value is already in the set (like "bueller" is here), you won;t be able to add it again.
+
+</details>
+
+# Sets Do It For You
+
+A set won’t allow you to add a value that’s already present. But, if you wanted to insert the user "heather" to this set you’d be able to, as it’s a new value! It would get added to the end of the set.
+
+![set3](../pics/set3.png)
