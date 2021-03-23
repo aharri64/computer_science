@@ -5,7 +5,7 @@ We’ve already learned about linked lists, a basic way to store data in nodes. 
 ### TOPICS
 
 - Binary Trees
-- Breadth- and Depth-First Traversal
+- Breadth-First and Depth-First Traversal
 - Tries
 
 # First Things First: Trees
@@ -131,3 +131,42 @@ O(N)
 Since we need to traverse nodes one at a time in order to get to where we'd place the new value, our time complexity here is O(N).
 
 </details>
+
+# Traversing a Binary Tree
+
+When you search for a node, insert a new one, or evaluate the size of a tree, you’re “traversing” it, which is just a fancy term for checking every node in a tree structure.
+
+There are a couple of ways to accomplish this. You could do it iteratively with a `while` loop and `currentNode` pointer to move through the tree until you find what you’re looking for.
+
+You could do it that way, but that wouldn’t be elegant code. Traversing a binary tree means moving along multiple paths in the tree. And the best method for calculating multiple paths or possibilities? Recursion, of course!
+
+# Breadth-First vs. Depth-First Search
+
+(video)
+
+- Transcript:
+
+There are two ways that you’ll end up traversing a binary tree — breadth-first or depth-first. They’re two different search operations that move through a tree in different ways.
+
+In breadth-first search, we start by going wide. We visit each node that’s connected to the root node before moving down to the next level of nodes. Then, we’ll check each node connected to those nodes, move down a level, and so on. Breadth-first search tries to stay as close to the root node as possible before moving on to subsequent parts of the graph.
+
+In depth-first search, we start by going deep. First we visit the root node, then one of its child nodes, and so on until we reach the end of the tree. We then return to the root and visit the next related node and all of the related nodes until we can’t go any further, and then circle back up. Depth-first search tries to get as far away from the starting point as possible, as soon as possible, before it hits a dead end and has to start over.
+
+Imagine you’re playing chess and planning your next move. Do you think of all possible moves you could make next? That’s breadth-first thinking. Or, do you pick one move and figure out how far it could take you? That’s depth-first thinking.
+
+# Which One Wins?
+
+Everyone’s a winner when it comes to search methods — there’s not one that’s better than another. The search method you choose depends on the size and shape of your tree as well as the type of data you’re looking for:
+
+| Breadth-first is better...                                                       | Depth-first is better...                                          |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| If you know the value you’re looking for is closer to the top.                   | If you know the value you’re looking for is closer to the bottom. |
+| If your tree is very, very deep.                                                 | If your tree is very, very wide.                                  |
+| When memory isn’t a concern.                                                     | When you need to be efficient with your memory.                   |
+| When you’re trying to find the shortest path from the root node to another node. | When you’re trying to understand dependencies in the data.        |
+| If you only want to use iteration.                                               | If you want to use recursion.                                     |
+
+# Knowledge Check
+
+Imagine that you’re searching your family tree for a certain family member. If you’re looking for someone who’s currently alive, would breadth- or depth-first search be the better option?Knowledge Check
+Imagine that you’re searching your family tree for a certain family member. If you’re looking for someone who’s currently alive, would breadth- or depth-first search be the better option?
